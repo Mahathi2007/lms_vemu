@@ -1,0 +1,236 @@
+/* ============================================================
+   VEMU LIBRARY — CONTACT PAGE (contact.css)
+   UNIFIED DARK THEME — Matches Login & Dashboard
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg:      #f0f4ff;
+    --bg2:     #e8eef8;
+    --card:    #ffffff;
+    --card2:   #f7f9ff;
+    --card3:   #eef2fb;
+    --border:  #d4ddf5;
+    --accent:  #7e4a8a;
+    --gold:    #c07830;
+    --gold2:   #d4903a;
+    --gold3:   #f0b95a;
+    --t1:      #1e2d5a;
+    --t2:      #4a5d82;
+    --t3:      #8898b8;
+    --shadow:  0 8px 36px rgba(0,0,0,.6);
+    --radius:  15px;
+    --tr:      .28s cubic-bezier(.4,0,.2,1);
+    --f-display: 'Playfair Display', serif;
+    --f-body:    'Plus Jakarta Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; height: auto; overflow-y: auto; }
+body {
+    font-family: var(--f-body);
+    background: var(--bg);
+    color: var(--t1);
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+::-webkit-scrollbar { width: 5px }
+::-webkit-scrollbar-track { background: var(--bg2) }
+::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #3b4f8a, #2e3f73); border-radius: 10px }
+
+/* HEADER — identical across all pages */
+header {
+    background: linear-gradient(135deg, #3b4f8a, #2e3f73);
+    
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 68px;
+    border-bottom: 3px solid #d4903a;
+}
+
+.header-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.logo {
+    display: flex; align-items: center; gap: 12px;
+    font-family: var(--f-display); font-size: 1.2rem; font-weight: 700;
+    color: #f0b95a; text-decoration: none;
+}
+.logo img {
+    height: 42px; border-radius: 9px; background: white;
+    padding: 3px; box-shadow: 0 2px 10px rgba(126,74,138,.3);
+}
+nav a {
+    margin-left: 4px; text-decoration: none; color: rgba(255,255,255,.92);
+    font-weight: 600; font-size: .9rem; padding: 8px 14px;
+    border-radius: 8px; transition: all var(--tr); display: inline-block;
+}
+nav a:hover { color: #f0b95a; background: rgba(255,255,255,.1); }
+.login-btn {
+    background: linear-gradient(135deg, var(--accent), var(--gold)) !important;
+    color: white !important; padding: 9px 22px !important;
+    border-radius: 50px !important; font-weight: 700 !important;
+    box-shadow: 0 4px 16px rgba(126,74,138,.35) !important;
+}
+.login-btn:hover { transform: translateY(-2px) !important; box-shadow: 0 7px 24px rgba(126,74,138,.5) !important; }
+
+/* PAGE HERO BANNER */
+main { padding: 0; }
+
+/* CONTAINER */
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+
+/* Override inline page title styles */
+section[style*="text-align: center"] h1[style*="color: #667eea"] {
+    color: #1e2d5a !important;
+    font-family: var(--f-display) !important;
+    font-size: 2.5rem !important;
+    font-weight: 900 !important;
+}
+section[style*="text-align: center"] p[style*="color: #666"] { color: #4a5d82 !important; }
+
+/* ABOUT SECTIONS (shared) — dark card style */
+.about-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px 32px;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--tr);
+    box-shadow: 0 3px 16px rgba(59,79,138,.06);
+}
+.about-section:hover { border-color: var(--gold2); box-shadow: 0 8px 30px rgba(59,79,138,.12); }
+.about-section::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0; width: 3px;
+    background: linear-gradient(180deg, #7e4a8a, #d4903a);
+}
+.about-section h2 {
+    font-family: var(--f-display);
+    color: var(--t1); margin-bottom: 20px;
+    font-size: 1.35rem; font-weight: 700;
+}
+/* Override inline h2 color */
+.about-section h2[style*="color:"] { color: var(--t1) !important; }
+.about-section h4 { color: var(--gold2); font-size: .95rem; margin-bottom: 8px; font-weight: 600; }
+/* Override inline h4 colors */
+.about-section h4[style*="color: #667eea"],
+.about-section h4[style*="color: #764ba2"] { color: var(--gold2) !important; }
+.about-section p { color: #3d4a72; margin-bottom: 10px; line-height: 1.75; }
+/* Override inline p colors */
+.about-section p[style*="color: #666"],
+.about-section p[style*="color: #444"],
+.about-section p[style*="color: #555"] { color: #3d4a72 !important; }
+.about-section p[style*="margin-left"] { color: #3d4a72 !important; }
+
+/* Override the gradient CTA banner */
+.about-section[style*="background: linear-gradient(135deg, #667eea"] {
+    background: linear-gradient(135deg, rgba(126,74,138,.15), rgba(200,137,26,.1)) !important;
+    border-color: rgba(192,120,48,.2) !important;
+}
+.about-section[style*="background: linear-gradient(135deg, #667eea"] h2 { color: var(--t1) !important; }
+.about-section[style*="background: linear-gradient(135deg, #667eea"] p { color: #3d4a72 !important; }
+
+/* CONTACT INFO GRID */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+.contact-item {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: 10px;
+    border-left: 3px solid #d4903a;
+    transition: all var(--tr);
+}
+.contact-item:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,.3); border-color: var(--gold2); }
+.contact-item h4 { color: #b8720a !important; margin-bottom: 10px; font-weight: 700; }
+.contact-item p { color: #3d4a72 !important; font-size: 13px; margin: 0; }
+.contact-item a { color: var(--gold2) !important; text-decoration: none; }
+.contact-item a:hover { opacity: .75; }
+
+/* FORM SECTION */
+.form-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-top: 22px;
+    position: relative;
+    overflow: hidden;
+}
+.form-section::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0; width: 3px;
+    background: linear-gradient(180deg, #7e4a8a, #d4903a);
+}
+.form-section h3 { color: var(--t1); font-family: var(--f-display); margin-bottom: 16px; font-size: 1.1rem; }
+
+input, textarea, select {
+    width: 100%;
+    padding: 11px 14px;
+    background: var(--card2);
+    border: 1.5px solid var(--border);
+    border-radius: 9px;
+    color: var(--t1);
+    font-family: var(--f-body);
+    font-size: 14px;
+    outline: none;
+    transition: border-color var(--tr), box-shadow var(--tr);
+    margin-bottom: 14px;
+}
+input:focus, textarea:focus {
+    border-color: var(--gold2);
+    box-shadow: 0 0 0 3px rgba(192,120,48,.1);
+}
+input::placeholder, textarea::placeholder { color: var(--t3); }
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #7e4a8a, #c07830);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all var(--tr);
+    box-shadow: 0 4px 16px rgba(126,74,138,.25);
+    font-size: .9rem;
+    border: none;
+    cursor: pointer;
+    font-family: var(--f-body);
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(126,74,138,.4); }
+
+/* FOOTER */
+footer {
+    background: #2e3f73;
+    border-top: 3px solid #d4903a;
+    color: rgba(255,255,255,.7);
+    text-align: center;
+    padding: 2.5rem 6%;
+    margin-top: 40px;
+}
+.footer-text { font-size: 13px; margin: 6px 0; color: rgba(255,255,255,.5); }
+footer a { color: #f0b95a; text-decoration: none; transition: opacity var(--tr); }
+footer a:hover { opacity: .75; }
+
+@media (max-width: 768px) {
+    header { padding: 0 4%; }
+    .container { padding: 24px 16px; }
+    .about-section { padding: 22px 20px; }
+    .form-section { padding: 22px 20px; }
+}

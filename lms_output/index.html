@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEMU Library Management System</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="vemu-logo.jpeg" alt="VEMU Logo">
+        <span>VEMU LIBRARY</span>
+    </div>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+    </nav>
+    <button class="nav-toggle" onclick="this.parentElement.querySelector('nav').classList.toggle('open')">
+        <i class="fas fa-bars"></i>
+    </button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-award"></i> AICTE Approved · JNTUA Affiliated</div>
+        <h1>Welcome to VEMU<br><span>Institute of Technology</span></h1>
+        <p>Your gateway to knowledge — browse 50,000+ books, manage loans, track dues and more with our Smart Library Management System.</p>
+        <div class="hero-btns">
+            <a href="login.html" class="btn-hero-primary"><i class="fas fa-book-open"></i> Enter Library Portal</a>
+            <a href="about.html" class="btn-hero-ghost">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="hero-overlay"></div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-container">
+    <div class="stat-card">
+        <h3 class="stat-number">50,000+</h3>
+        <p><i class="fas fa-book"></i> Books Available</p>
+    </div>
+    <div class="stat-card">
+        <h3 class="stat-number">1,250+</h3>
+        <p><i class="fas fa-user-graduate"></i> Students Registered</p>
+    </div>
+    <div class="stat-card">
+        <h3 class="stat-number">24/7</h3>
+        <p><i class="fas fa-clock"></i> Online Access</p>
+    </div>
+    <div class="stat-card">
+        <h3 class="stat-number">15</h3>
+        <p><i class="fas fa-calendar-alt"></i> Days Borrow Limit</p>
+    </div>
+</section>
+
+<!-- QUICK ACCESS CARDS -->
+<section class="quick-access">
+    <div class="qa-card">
+        <div class="qa-icon"><i class="fas fa-search"></i></div>
+        <h3>Search Books</h3>
+        <p>Find and borrow books</p>
+        <a href="login.html" class="qa-btn">Search Now</a>
+    </div>
+    <div class="qa-card">
+        <div class="qa-icon"><i class="fas fa-tachometer-alt"></i></div>
+        <h3>Admin Dashboard</h3>
+        <p>Manage users and inventory</p>
+        <a href="login.html" class="qa-btn">Go to Dashboard</a>
+    </div>
+    <div class="qa-card">
+        <div class="qa-icon"><i class="fas fa-clipboard-list"></i></div>
+        <h3>Borrowed Books</h3>
+        <p>View your borrowed books</p>
+        <a href="login.html" class="qa-btn">View List</a>
+    </div>
+</section>
+
+<!-- LATEST ARRIVALS — Book Covers -->
+<section class="books-section">
+    <div class="section-header">
+        <h2><i class="fas fa-star"></i> Latest Arrivals</h2>
+        <div class="section-divider"></div>
+    </div>
+    <div class="books-showcase">
+        <div class="book-item">
+            <div class="book-cover">
+                <img src="https://covers.openlibrary.org/b/id/8432895-L.jpg" alt="The Great Gatsby"
+                     onerror="this.src='https://via.placeholder.com/180x260/1a2a6c/f5c842?text=Book'"/>
+            </div>
+            <h4>The Great Gatsby</h4>
+            <p>F. Scott Fitzgerald</p>
+        </div>
+        <div class="book-item">
+            <div class="book-cover">
+                <img src="https://covers.openlibrary.org/b/id/8575141-L.jpg" alt="1984"
+                     onerror="this.src='https://via.placeholder.com/180x260/1a2a6c/f5c842?text=Book'"/>
+            </div>
+            <h4>1984</h4>
+            <p>George Orwell</p>
+        </div>
+        <div class="book-item">
+            <div class="book-cover">
+                <img src="https://covers.openlibrary.org/b/id/8314129-L.jpg" alt="To Kill a Mockingbird"
+                     onerror="this.src='https://via.placeholder.com/180x260/1a2a6c/f5c842?text=Book'"/>
+            </div>
+            <h4>To Kill a Mockingbird</h4>
+            <p>Harper Lee</p>
+        </div>
+        <div class="book-item">
+            <div class="book-cover">
+                <img src="https://covers.openlibrary.org/b/id/8739161-L.jpg" alt="Sapiens"
+                     onerror="this.src='https://via.placeholder.com/180x260/1a2a6c/f5c842?text=Book'"/>
+            </div>
+            <h4>Sapiens</h4>
+            <p>Yuval Noah Harari</p>
+        </div>
+        <div class="book-item">
+            <div class="book-cover">
+                <img src="https://covers.openlibrary.org/b/id/8750793-L.jpg" alt="Atomic Habits"
+                     onerror="this.src='https://via.placeholder.com/180x260/1a2a6c/f5c842?text=Book'"/>
+            </div>
+            <h4>Atomic Habits</h4>
+            <p>James Clear</p>
+        </div>
+        <div class="book-item">
+            <div class="book-cover">
+                <img src="https://covers.openlibrary.org/b/id/12193378-L.jpg" alt="The Alchemist"
+                     onerror="this.src='https://via.placeholder.com/180x260/1a2a6c/f5c842?text=Book'"/>
+            </div>
+            <h4>The Alchemist</h4>
+            <p>Paulo Coelho</p>
+        </div>
+        <div class="book-item">
+            <div class="book-cover">
+                <img src="https://covers.openlibrary.org/b/id/7984916-L.jpg" alt="Rich Dad Poor Dad"
+                     onerror="this.src='https://via.placeholder.com/180x260/1a2a6c/f5c842?text=Book'"/>
+            </div>
+            <h4>Rich Dad Poor Dad</h4>
+            <p>Robert Kiyosaki</p>
+        </div>
+        <div class="book-item">
+            <div class="book-cover">
+                <img src="https://covers.openlibrary.org/b/id/6979861-L.jpg" alt="Think and Grow Rich"
+                     onerror="this.src='https://via.placeholder.com/180x260/1a2a6c/f5c842?text=Book'"/>
+            </div>
+            <h4>Think and Grow Rich</h4>
+            <p>Napoleon Hill</p>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;">
+        <a href="login.html" class="btn-view-all"><i class="fas fa-th-large"></i> View All Books</a>
+    </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section class="features-section">
+    <div class="section-header">
+        <h2><i class="fas fa-star-of-life"></i> Key Features</h2>
+        <div class="section-divider"></div>
+    </div>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="fc-icon"><i class="fas fa-book-open"></i></div>
+            <h3>Easy Book Management</h3>
+            <p>Browse and manage the library collection easily. Search by title, author, or book ID.</p>
+        </div>
+        <div class="feature-card">
+            <div class="fc-icon"><i class="fas fa-users-cog"></i></div>
+            <h3>Multi Role Access</h3>
+            <p>Separate dashboards for Admin, Librarian, Faculty and Students.</p>
+        </div>
+        <div class="feature-card">
+            <div class="fc-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Smart Tracking</h3>
+            <p>Track issued books, due dates, returns and overdue books automatically.</p>
+        </div>
+        <div class="feature-card">
+            <div class="fc-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Secure System</h3>
+            <p>Safe login with role-based authentication and protected data storage.</p>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+    <div class="section-header light">
+        <h2><i class="fas fa-rocket"></i> How It Works</h2>
+        <div class="section-divider light"></div>
+    </div>
+    <div class="steps-row">
+        <div class="step-item">
+            <div class="step-num">01</div>
+            <h3>Login</h3>
+            <p>Select your role and sign in with your credentials.</p>
+        </div>
+        <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="step-item">
+            <div class="step-num">02</div>
+            <h3>Access Portal</h3>
+            <p>Open your dashboard and explore all library features.</p>
+        </div>
+        <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="step-item">
+            <div class="step-num">03</div>
+            <h3>Manage Books</h3>
+            <p>Borrow, return or manage books based on your role.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-logo">
+                <img src="vemu-logo.jpeg" alt="VEMU"/>
+                <span>VEMU LIBRARY</span>
+            </div>
+            <p class="footer-desc">Empowering students and faculty with seamless access to knowledge and academic resources.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                <li><a href="login.html"><i class="fas fa-chevron-right"></i> Login</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> P. Kothakota, Chittoor Dist., A.P.</p>
+            <p><i class="fas fa-envelope"></i> library@vemu.edu.in</p>
+            <p><i class="fas fa-phone"></i> +91 12345 67890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 VEMU Institute of Technology. All Rights Reserved. | T.MAHATHI</p>
+    </div>
+</footer>
+
+</body>
+</html>
